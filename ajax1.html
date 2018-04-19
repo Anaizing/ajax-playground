@@ -22,6 +22,12 @@
             xhr.open('GET', 'sample.txt', true);
 
             console.log('READYSTATE: ', xhr.readyState);
+
+            // OPTIONAL - used for loading or loaders
+            xhr.onprogress = function () {
+                console.log('READYSTATE: ', xhr.readyState);
+            }
+        
             
 
 
