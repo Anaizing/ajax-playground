@@ -10,7 +10,7 @@
 </head>
 <body>
     <button id="button">Get Text File </button>
-
+    <div id="text"></div>
     <script>
         // Create event Listener
         document.getElementById('button').addEventListener('click', loadText);
@@ -32,9 +32,11 @@
 
 
             xhr.onload = function () {
-                //console.log('READYSTATE: ', xhr.readyState);
+                console.log('READYSTATE: ', xhr.readyState);
                 if(this.status == 200){
                   //  console.log(this.responseText);   
+                  document.getElementById('text').innerHTML =
+                  this.responseText;
                 }
             }
 
