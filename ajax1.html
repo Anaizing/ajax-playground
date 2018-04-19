@@ -37,7 +37,9 @@
                   //  console.log(this.responseText);   
                   document.getElementById('text').innerHTML =
                   this.responseText;
-                }
+                } elseif(this.status = 404) 
+                    document.getElementById('text').innerHTML = 'Not found';
+                
             }
 
             xhr.onerror = function(){
