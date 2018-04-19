@@ -32,10 +32,14 @@
 
 
             xhr.onload = function () {
-                console.log('READYSTATE: ', xhr.readyState);
+                //console.log('READYSTATE: ', xhr.readyState);
                 if(this.status == 200){
                   //  console.log(this.responseText);   
                 }
+            }
+
+            xhr.onerror = function(){
+                console.log('Request Error...');
             }
             
             // xhr.onreadystatechange = function () {
